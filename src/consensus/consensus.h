@@ -16,12 +16,12 @@ static const unsigned int MAX_BLOCK_WEIGHT = 16000000;
 /** The maximum allowed number of signature check operations in a block (network rule) */
 static const int64_t MAX_BLOCK_SIGOPS_COST = 320000;
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
-static const int COINBASE_MATURITY = 100;
+static const int COINBASE_MATURITY = 300;
 
-static const int WITNESS_SCALE_FACTOR = 4;
+static const int WITNESS_SCALE_FACTOR = 16;
 
-static const size_t MIN_TRANSACTION_WEIGHT = WITNESS_SCALE_FACTOR * 60; // 60 is the lower bound for the size of a valid serialized CTransaction
-static const size_t MIN_SERIALIZABLE_TRANSACTION_WEIGHT = WITNESS_SCALE_FACTOR * 10; // 10 is the lower bound for the size of a serialized CTransaction
+static const size_t MIN_TRANSACTION_WEIGHT = WITNESS_SCALE_FACTOR * 240; // 60 is the lower bound for the size of a valid serialized CTransaction
+static const size_t MIN_SERIALIZABLE_TRANSACTION_WEIGHT = WITNESS_SCALE_FACTOR * 40; // 10 is the lower bound for the size of a serialized CTransaction
 
 /** Flags for nSequence and nLockTime locks */
 /** Interpret sequence numbers as relative lock-time constraints. */
